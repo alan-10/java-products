@@ -38,6 +38,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/home/alan/alan/java-alan"/>
+			<item value="/home/alan/alan/java-alan/crud2"/>
 			<item value="/home/alan/alan/projects-java/crud2"/>
 			<item value="/home/alan/alan/java-workspaces/jbcc"/>
 			<item value="/home/alan/alan/projects-java/crud"/>
