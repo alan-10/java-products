@@ -1,0 +1,8 @@
+INDEX VERSION 1.134+/home/alan/alan/projects-java/crud2/.metadata/.plugins/org.eclipse.jdt.core
+80333415.index
+3987369810.index
+1565680965.index
+862635504.index
+2595053508.index
+1865797976.index
+1956855528.index
