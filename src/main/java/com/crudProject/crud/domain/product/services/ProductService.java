@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.crudProject.crud.domain.product.entities.Product;
-import com.crudProject.crud.domain.product.repository.ProductRepository;
+import com.crudProject.crud.domain.product.repositories.ProductRepository;
 
 @Service
 public class ProductService {

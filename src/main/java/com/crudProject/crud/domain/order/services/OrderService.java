@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.crudProject.crud.domain.order.entities.Order;
 import com.crudProject.crud.domain.order.repository.OrderRepository;
-import com.crudProject.crud.domain.product.repository.ProductRepository;
+import com.crudProject.crud.domain.product.repositories.ProductRepository;
 import com.crudProject.crud.domain.product.services.ProductService;
 
 @Service

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.crudProject.crud.domain.order.dtos.ConvertDtosToEntities;
+import com.crudProject.crud.domain.order.dtos.CreateOrderDTO;
 import com.crudProject.crud.domain.order.entities.Order;
 import com.crudProject.crud.domain.order.services.OrderService;
 
@@ -38,10 +40,9 @@ public class OerderControllser {
 	
 	
 	@PostMapping
-	public ResponseEntity<Order> insert(@RequestBody Order body){
+	public ResponseEntity<Order> insert(@RequestBody CreateOrderDTO body){
 		
-		System.out.println("body + " + body);
-		Order order = this.service.create(body);
+		Order order = this.service.create(ConvertDtosToEntities.orderEntity(body));
 		
 		return ResponseEntity.ok().body(order);
 	}

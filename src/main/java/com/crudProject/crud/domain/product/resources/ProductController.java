@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.crudProject.crud.domain.product.dtos.ConvertDtosToEntities;
+import com.crudProject.crud.domain.product.dtos.CreateProductDTO;
 import com.crudProject.crud.domain.product.dtos.IncreaseProductDTO;
 import com.crudProject.crud.domain.product.entities.Product;
 import com.crudProject.crud.domain.product.services.ProductService;
@@ -23,9 +25,9 @@ public class ProductController {
 	private ProductService service;
 
 	@PostMapping
-	public ResponseEntity<Product> insert(@RequestBody Product body) {
+	public ResponseEntity<Product> insert(@RequestBody CreateProductDTO body) {
 
-		Product newProduct = this.service.save(body);
+		Product newProduct = this.service.save(ConvertDtosToEntities.productEntity(body));
 
 		return ResponseEntity.ok().body(newProduct);
 

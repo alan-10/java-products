@@ -1,4 +1,4 @@
-package com.crudProject.crud.domain.user;
+package com.crudProject.crud.domain.user.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

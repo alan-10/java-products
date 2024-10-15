@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.crudProject.crud.domain.product.entities.Category;
-import com.crudProject.crud.domain.product.repository.CategoryRepository;
+import com.crudProject.crud.domain.product.repositories.CategoryRepository;
 
 @Service
 public class CategoryService {

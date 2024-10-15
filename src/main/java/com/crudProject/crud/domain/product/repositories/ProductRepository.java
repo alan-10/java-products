@@ -1,4 +1,4 @@
-package com.crudProject.crud.domain.product.repository;
+package com.crudProject.crud.domain.product.repositories;
 
 import java.util.List;
 

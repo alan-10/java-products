@@ -14,13 +14,14 @@ import com.crudProject.crud.domain.order.enuns.OrderStatus;
 import com.crudProject.crud.domain.order.repository.OrderRepository;
 import com.crudProject.crud.domain.product.entities.Category;
 import com.crudProject.crud.domain.product.entities.Product;
-import com.crudProject.crud.domain.product.repository.CategoryRepository;
-import com.crudProject.crud.domain.product.repository.ProductRepository;
-import com.crudProject.crud.domain.user.UserRepository;
+import com.crudProject.crud.domain.product.repositories.CategoryRepository;
+import com.crudProject.crud.domain.product.repositories.ProductRepository;
 import com.crudProject.crud.domain.user.entities.User;
+import com.crudProject.crud.domain.user.repositories.UserRepository;
 
 @Configuration
 @Profile("test")
+
 public class TestConfig implements CommandLineRunner {
 
 	@Autowired
@@ -37,6 +38,8 @@ public class TestConfig implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		
+		System.out.println("my alan");
 
 		User user1 = new User(null, "alan1", "alan@gmail.com", "989887t22", "12345");
 		User user2 = new User(null, "pablo", "pabloviadinho@gmail.com", "98988733", "12345");
@@ -46,6 +49,9 @@ public class TestConfig implements CommandLineRunner {
 		Category category = new Category(null, "Category 1", "First category");
 
 		Category newCategory = categoryRepository.save(category);
+		
+		System.out.println("seed " + category);
+		 
 
 		Product product1 = new Product(null, "Smartphone XYZ",
 				"Smartphone de última geração com câmera de 108MP e 128GB de armazenamento.", 2999.99, 10, true,
