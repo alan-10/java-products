@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.crudProject.crud.domain.user.entities.User;
+import com.crudProject.crud.domain.user.exceptions.UserNotFountException;
 import com.crudProject.crud.domain.user.repositories.UserRepository;
 
 @Service
@@ -25,6 +26,7 @@ public class UserService {
 	}
 
 	public User create(User user) {
+
 		User userCreated = repository.save(user);
 		return userCreated;
 	}

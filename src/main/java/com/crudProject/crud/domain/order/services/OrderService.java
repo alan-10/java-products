@@ -31,12 +31,8 @@ public class OrderService {
 	}
 
 	public Order create(Order order) {
-		
-		System.out.println("orderCreated 1: " + order);
 
 		Order orderCreated = this.repository.save(order);
-		
-		System.out.println("orderCreated: " + orderCreated);
 
 		this.productService.subtractProduct(orderCreated.getProductId(), orderCreated.getProductAmount());
 		return orderCreated;
