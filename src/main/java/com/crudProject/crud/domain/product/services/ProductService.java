@@ -1,5 +1,8 @@
 package com.crudProject.crud.domain.product.services;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +33,15 @@ public class ProductService {
 		product.setQuantity(product.getQuantity() + quantityProduct);
 
 		repository.save(product);
+	}
+
+	public List<Product> getLowStokProducts() {
+
+		final Integer amountProduct = 11;
+
+		List<Product> products = this.repository.findByQuantityLessThanEqual(amountProduct);
+
+		return products;
 	}
 
 }
