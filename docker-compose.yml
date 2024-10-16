@@ -1,12 +1,12 @@
 version: '3.8'
 services:
-  app:
-   build: .
-   container_name: spring_app
-   ports:
-     - "8080:8080"	
-   depends_on:
-     - postgres
+  #app:
+   #build: .
+   #container_name: spring_app
+   #ports:
+    # - "8080:8080"	
+   #depends_on:
+    # - postgres
   postgres:
     image: postgres:15-alpine  
     container_name: my_postgres_db

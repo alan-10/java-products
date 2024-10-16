@@ -8,19 +8,20 @@ public class CreateOrderDTO {
 	private Instant moment;
 	private OrderStatus orderStatus;
 	private Integer productAmount;
-	private Long product_id;
-	private Long client_id;
+	private Long productId;
+	private Long clientId;
 
 	public CreateOrderDTO() {
 	}
 
-	public CreateOrderDTO(Instant moment, OrderStatus orderStatus, Integer productAmount, Long product_id, Long client_id) {
+	public CreateOrderDTO(Instant moment, OrderStatus orderStatus, Integer productAmount,Long clientId ,Long productId
+			) {
 		super();
 		this.moment = moment;
 		this.orderStatus = orderStatus;
 		this.productAmount = productAmount;
-		this.product_id = product_id;
-		this.client_id = client_id;
+		this.productId = productId;
+		this.clientId = clientId;
 	}
 
 	public Instant getMoment() {
@@ -47,20 +48,20 @@ public class CreateOrderDTO {
 		this.productAmount = productAmount;
 	}
 
-	public Long getProduct_id() {
-		return product_id;
+	public Long getProductId() {
+		return productId;
 	}
 
-	public void setProduct_id(Long product_id) {
-		this.product_id = product_id;
+	public void setProductId(Long product_id) {
+		this.productId = product_id;
 	}
 
-	public Long getClient_id() {
-		return client_id;
+	public Long getClientId() {
+		return clientId;
 	}
 
-	public void setClient_id(Long client_id) {
-		this.client_id = client_id;
+	public void setClientId(Long client_id) {
+		this.clientId = client_id;
 	}
 
 }

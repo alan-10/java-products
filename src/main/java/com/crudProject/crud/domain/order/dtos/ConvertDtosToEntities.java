@@ -6,7 +6,7 @@ public class ConvertDtosToEntities {
 
 	public static Order orderEntity(CreateOrderDTO orderDTO) {
 		return new Order(null, orderDTO.getMoment(), orderDTO.getOrderStatus(), orderDTO.getProductAmount(),
-				orderDTO.getClient_id(), orderDTO.getProduct_id());
+				orderDTO.getClientId(), orderDTO.getProductId());
 	}
 
 }

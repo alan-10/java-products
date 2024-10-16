@@ -1,5 +1,6 @@
 package com.crudProject.crud.domain.order.services;
 
+import java.lang.StackWalker.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -8,14 +9,25 @@ import org.springframework.stereotype.Service;
 
 import com.crudProject.crud.domain.order.entities.Order;
 import com.crudProject.crud.domain.order.repository.OrderRepository;
+import com.crudProject.crud.domain.product.entities.Product;
+import com.crudProject.crud.domain.product.exceptions.ProductNotFountException;
 import com.crudProject.crud.domain.product.repositories.ProductRepository;
 import com.crudProject.crud.domain.product.services.ProductService;
+import com.crudProject.crud.domain.user.entities.User;
+import com.crudProject.crud.domain.user.exceptions.UserNotFountException;
+import com.crudProject.crud.domain.user.repositories.UserRepository;
 
 @Service
 public class OrderService {
 
 	@Autowired
 	OrderRepository repository;
+
+	@Autowired
+	UserRepository userRepository;
+
+	@Autowired
+	ProductRepository productRepository;
 
 	@Autowired
 	ProductService productService;
@@ -31,6 +43,18 @@ public class OrderService {
 	}
 
 	public Order create(Order order) {
+
+		Optional<Product> product = this.productRepository.findById(order.getProductId());
+
+		Optional<User> client = this.userRepository.findById(order.getClientId());
+
+		if (!product.isPresent()) {
+			throw new ProductNotFountException();
+		}
+
+		if (!client.isPresent()) {
+			throw new UserNotFountException();
+		}
 
 		Order orderCreated = this.repository.save(order);
 
