@@ -72,7 +72,7 @@ Gestão vendas
 
     GET /order//{id}: Retorna a venda pelo ID.
     POST /Order: Cria uma nova venda.
-4. Regra Negócio
+## Regra Negócio
 
          Para criar uma venda é preciso primeiro serguir os seguintes passos
          1 criar uma categoria
