@@ -46,6 +46,19 @@ public class ProductController {
 		List<Product> products = this.service.getLowStokProducts();
 		
 		return ResponseEntity.ok().body(products);
+	}
+	
+	@GetMapping("/list")
+	public ResponseEntity<List<Product>> list(){
+		List<Product> products = this.service.getAllProducts();
 		
+		return ResponseEntity.ok().body(products);
+	}
+	
+	@GetMapping("/findBYId/{id}")
+	public ResponseEntity<Product> findById(@PathVariable Long id){
+		Product product = this.service.findById(id);
+		
+		return ResponseEntity.ok().body(product);
 	}
 }

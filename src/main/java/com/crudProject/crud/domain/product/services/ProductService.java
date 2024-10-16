@@ -73,4 +73,22 @@ public class ProductService {
 		return true;
 	}
 
+	public List<Product> getAllProducts() {
+
+		List<Product> products = this.ProductRepository.findAll();
+
+		return products;
+	}
+
+	public Product findById(Long id) {
+
+		Product product = this.ProductRepository.findById(id).orElse(null);
+
+		if (product == null) {
+			throw new ProductNotFountException();
+		}
+
+		return product;
+	}
+
 }
