@@ -9,7 +9,7 @@ Uma API RESTful desenvolvida em Spring Boot para gerenciar productos
 - [Instalação](#instalação)
 - [Como Executar](#como-executar)
 - [Endpoints](#endpoints)
-- [Regra Negócio](#regra-negocio)
+- [Regra de Negócio](#regra-de-negocio)
 - [Contribuição](#contribuição)
 - [Licença](#licença)
 
@@ -72,7 +72,9 @@ Gestão vendas
 
     GET /order//{id}: Retorna a venda pelo ID.
     POST /Order: Cria uma nova venda.
-## Regra Negócio
+    
+
+## Regra de Negócio
 
          Para criar uma venda é preciso primeiro serguir os seguintes passos
          1 criar uma categoria
