@@ -61,4 +61,16 @@ public class ProductService {
 		return products;
 	}
 
+	public boolean hasProductInStock(Long id, Integer productOut) {
+		Product product = this.ProductRepository.findById(id).orElse(null);
+
+		Boolean hasNotProduct = (product != null && (product.getQuantity() - productOut < 0));
+
+		if (hasNotProduct) {
+			return false;
+		}
+
+		return true;
+	}
+
 }

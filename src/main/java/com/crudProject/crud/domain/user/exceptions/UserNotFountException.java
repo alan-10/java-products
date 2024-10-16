@@ -6,7 +6,7 @@ public class UserNotFountException extends RuntimeException{
 
 
 	public UserNotFountException() {
-		super("User not exists");
+		super("Client not exists");
 	}
 	
 	
