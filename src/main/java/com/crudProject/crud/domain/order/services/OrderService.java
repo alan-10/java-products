@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.crudProject.crud.domain.order.entities.Order;
 import com.crudProject.crud.domain.order.repository.OrderRepository;
 import com.crudProject.crud.domain.product.entities.Product;
-import com.crudProject.crud.domain.product.exceptions.HasNotProductInStock;
+import com.crudProject.crud.domain.product.exceptions.HasNotProductInStockException;
 import com.crudProject.crud.domain.product.exceptions.ProductNotFountException;
 import com.crudProject.crud.domain.product.repositories.ProductRepository;
 import com.crudProject.crud.domain.product.services.ProductService;
@@ -60,7 +60,7 @@ public class OrderService {
 		Boolean hasProductInStock = this.productService.hasProductInStock(order.getProductId(), order.getProductAmount());
 
 		if (!hasProductInStock) {
-			throw new HasNotProductInStock();
+			throw new HasNotProductInStockException();
 		}
 
 		Order orderCreated = this.repository.save(order);

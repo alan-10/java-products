@@ -1,10 +1,10 @@
 package com.crudProject.crud.domain.product.exceptions;
 
-public class HasNotProductInStock extends RuntimeException {
+public class HasNotProductInStockException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 	
-	public HasNotProductInStock() {
+	public HasNotProductInStockException() {
 		super("product out of stock");
 	}
 
