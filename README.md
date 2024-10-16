@@ -90,3 +90,8 @@ caso o Produto não tenha estoque o suficinte para fazer a venda irá mostrar  u
 7. Licença
 
          Este projeto está licenciado sob a MIT License.
+
+## Arquivo Der 
+
+[der-grafuico.pdf](https://github.com/user-attachments/files/17404161/der-grafuico.pdf)
+
