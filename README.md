@@ -76,10 +76,10 @@ Gestão vendas
 ## Regra de Negócio
 
 Para criar uma venda é preciso primeiro serguir os seguintes passos
-1 criar uma categoria
-2 criar um produto vinculando o ID da acategoria criado no produtom, e a quantidade do estoque.
-3 Crir um cliente.
-4 Ao criar uma venda é necessário passar o ID do cliente e o Id do produto.
+1. criar uma categoria
+2. criar um produto vinculando o ID da acategoria criado no produtom, e a quantidade do estoque.
+3. Crir um cliente.
+4. Ao criar uma venda é necessário passar o ID do cliente e o Id do produto.
 
 caso o Produto não tenha estoque o suficinte para fazer a venda irá mostrar  um erro.
 
