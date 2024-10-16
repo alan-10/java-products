@@ -73,16 +73,15 @@ Gestão vendas
     GET /order//{id}: Retorna a venda pelo ID.
     POST /Order: Cria uma nova venda.
     
-
 ## Regra de Negócio
 
-         Para criar uma venda é preciso primeiro serguir os seguintes passos
-         1 criar uma categoria
-         2 criar um produto vinculando o ID da acategoria criado no produtom, e a quantidade do estoque.
-         3 Crir um cliente.
-         4 Ao criar uma venda é necessário passar o ID do cliente e o Id do produto.
+Para criar uma venda é preciso primeiro serguir os seguintes passos
+1 criar uma categoria
+2 criar um produto vinculando o ID da acategoria criado no produtom, e a quantidade do estoque.
+3 Crir um cliente.
+4 Ao criar uma venda é necessário passar o ID do cliente e o Id do produto.
 
-         caso o Produto não tenha estoque o suficinte para fazer a venda irá mostrar  um erro.
+caso o Produto não tenha estoque o suficinte para fazer a venda irá mostrar  um erro.
 
 6. Contribuição
 
