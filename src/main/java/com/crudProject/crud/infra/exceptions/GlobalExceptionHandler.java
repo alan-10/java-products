@@ -15,24 +15,34 @@ import com.crudProject.crud.domain.user.exceptions.UserNotFountException;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(UserNotFountException.class)
-	public ResponseEntity<?> handleUserNotFountException(UserNotFountException ex, WebRequest request) {
-		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	public ResponseEntity<ExceptionReturnFormat> handleUserNotFountException(UserNotFountException ex,
+			WebRequest request) {
+		ExceptionReturnFormat errorFormated = new ExceptionReturnFormat(ex.getMessage(), HttpStatus.NOT_FOUND);
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorFormated);
 	}
 
 	@ExceptionHandler(ProductNotFountException.class)
-	public ResponseEntity<?> handleProductNotFountExceptions(ProductNotFountException ex, WebRequest request) {
-		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	public ResponseEntity<ExceptionReturnFormat> handleProductNotFountExceptions(ProductNotFountException ex,
+			WebRequest request) {
+		ExceptionReturnFormat errorFormated = new ExceptionReturnFormat(ex.getMessage(), HttpStatus.NOT_FOUND);
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorFormated);
 	}
 
 	@ExceptionHandler(CategoryNotFountException.class)
-	public ResponseEntity<?> handleCategoryNotFount(CategoryNotFountException ex, WebRequest request) {
-		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	public ResponseEntity<ExceptionReturnFormat> handleCategoryNotFount(CategoryNotFountException ex,
+			WebRequest request) {
+		ExceptionReturnFormat errorFormated = new ExceptionReturnFormat(ex.getMessage(), HttpStatus.NOT_FOUND);
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorFormated);
 
 	}
-	
+
 	@ExceptionHandler(HasNotProductInStockException.class)
-	public ResponseEntity<?> HasNotProductInStock(HasNotProductInStockException ex, WebRequest request){
-		return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
+	public ResponseEntity<ExceptionReturnFormat> HasNotProductInStock(HasNotProductInStockException ex,
+			WebRequest request) {
+
+		ExceptionReturnFormat errorFormated = new ExceptionReturnFormat(ex.getMessage(), HttpStatus.NOT_FOUND);
+
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorFormated);
 	}
 
 	@ExceptionHandler(Exception.class)
