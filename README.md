@@ -31,7 +31,7 @@ Antes de começar, você precisa ter instalado em sua máquina:
 
    ```bash
    git clone https://github.com/seu-usuario/email-management-api.git
-   cd email-management-api
+   cd java-products
 
 2. Instale as dependências:
 
