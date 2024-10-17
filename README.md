@@ -30,7 +30,7 @@ Antes de começar, você precisa ter instalado em sua máquina:
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/email-management-api.git
+   git clone https://github.com/alan-10/java-products/tree/main
    cd java-products
 
 2. Instale as dependências:
