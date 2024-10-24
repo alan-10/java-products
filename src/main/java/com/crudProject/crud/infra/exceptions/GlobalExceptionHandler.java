@@ -47,7 +47,7 @@ public class GlobalExceptionHandler {
 
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<?> handleGlobalException(Exception ex, WebRequest request) {
-		System.out.println("Error" + ex.getStackTrace());
+		System.out.println("Error" + ex.getMessage()+ " "+   ex.getStackTrace());
 		return new ResponseEntity<>("Ocorreu um erro interno no servidor.", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 

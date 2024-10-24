@@ -18,7 +18,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "tb_order")
 public class Order implements Serializable {
@@ -52,91 +61,4 @@ public class Order implements Serializable {
 	@JoinColumn(name = "product_id", insertable = false, updatable = false)
 	private Product product;
 
-	public Order() {
-	}
-
-	public Order(Long id, Instant moment, OrderStatus orderStatus, Integer productAmount, Long clientId,
-			Long productId) {
-		this.id = id;
-		this.moment = moment;
-		this.orderStatus = orderStatus;
-		this.productAmount = productAmount;
-		this.productId =  productId;
-		this.clientId = clientId;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Instant getMoment() {
-		return moment;
-	}
-
-	public void setMoment(Instant moment) {
-		this.moment = moment;
-	}
-
-	public OrderStatus getOrderStatus() {
-		return orderStatus;
-	}
-
-	public void setOrderStatus(OrderStatus orderStatus) {
-		this.orderStatus = orderStatus;
-	}
-
-	public Integer getProductAmount() {
-		return productAmount;
-	}
-
-	public void setProductAmount(Integer productAmount) {
-		this.productAmount = productAmount;
-	}
-
-	public User getClient() {
-		return client;
-	}
-
-	public void setClient(User client) {
-		this.client = client;
-	}
-
-	public Product getProduct() {
-		return product;
-	}
-
-	public void setProduct(Product product) {
-		this.product = product;
-	}
-	
-	
-
-	public Long getClientId() {
-		return clientId;
-	}
-
-	public void setClientId(Long clientId) {
-		this.clientId = clientId;
-	}
-
-	public Long getProductId() {
-		return productId;
-	}
-
-	public void setProductId(Long productId) {
-		this.productId = productId;
-	}
-
-	@Override
-	public String toString() {
-		return "Order [id=" + id + ", moment=" + moment + ", orderStatus=" + orderStatus + ", productAmount="
-				+ productAmount + ", clientId=" + clientId + ", productId=" + productId + ", client=" + client
-				+ ", product=" + product + "]";
-	}
-
-	
 }
